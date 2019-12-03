@@ -18,35 +18,35 @@ const cl = (input) =>{
 //PERFORM LOGIC
 
 
-console.log("hello this is Eric")
+// console.log("hello this is Eric")
 
-const h1El = document.querySelector('h1');
-console.log(h1El);
+// const h1El = document.querySelector('h1');
+// console.log(h1El);
 
-setTimeout(()=> h1El.textContent = "I'm the new H1", 2000);
+// setTimeout(()=> h1El.textContent = "I'm the new H1", 2000);
 
-setTimeout(function(){ alert("Hello"); }, 3000)
+// setTimeout(function(){ alert("Hello"); }, 3000)
 
-const num = 10;
+// const num = 10;
 
-const myBtn = document.querySelector(".btn");
-myBtn.addEventListener('click', ()=>{
-    console.log("this button was clicked!")
-})
+// const myBtn = document.querySelector(".btn");
+// myBtn.addEventListener('click', ()=>{
+//     console.log("this button was clicked!")
+// })
 
-switch(num){
-    case 5: 
-        console.log("num is 5")
-        break;
-    case 1: 
-        console.log("num is 5")
-        break;
-    case 10: 
-        console.log("num is 10")
-        break;
-    default: 
-        console.log("That is a great number!")
-};
+// switch(num){
+//     case 5: 
+//         console.log("num is 5")
+//         break;
+//     case 1: 
+//         console.log("num is 5")
+//         break;
+//     case 10: 
+//         console.log("num is 10")
+//         break;
+//     default: 
+//         console.log("That is a great number!")
+// };
 
 //////////////////////////////
 //DATA TYPES
@@ -73,11 +73,28 @@ switch(num){
 // cl("age, ", age)
 // cl("date of birth ", dateOfBirth)
 
-var name = "Eric";
-let age = 30;
-const dateOfBirth = "Dec 28, 1988";
+// var name = "Eric";
+// let age = 30;
+// const dateOfBirth = "Dec 28, 1988";
 
-name = "Jerry Sloan";
+// cl(name = "Jerry Sloan");
+// cl(age = 31);
+// cl(dateOfBirth = "Jan 1, 1989");
+
+// var arrVar = [1, 2, 3];
+// let arrLet = [1, 2, 3];
+// const arrConst = [1, 2, 3];
+
+// arrVar.push(4);
+// arrLet.unshift(0);
+// arrConst.pop();
+// arrVar.shift();
+
+// cl(arrVar)
+// cl(arrLet)
+// cl(arrConst)
+
+// arrConst = "new const string";
 
 // name = "Carl";
 // age += 1;
