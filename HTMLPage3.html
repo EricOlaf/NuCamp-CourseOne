@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dating Website!</title>
+    <meta charset="UTF-8">
+    <style>
+
+        fieldset { 
+            background: lightyellow;
+            border: 10px solid yellow;
+            margin-bottom: 10px;
+            width: 720px;
+        }
+        label {
+            width: 180px;
+            display: inline-block;
+            text-align: right;
+            vertical-align: top;
+        }
+
+        label:hover,
+        input:hover {
+            font-size: 20px;
+        }
+
+        .box_radio {
+            width: auto;
+            text-align: right;
+            vertical-align: text-top;
+        }
+
+        .lrange {
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            width: 60px;
+            background: darkred;
+            color: white
+        }
+
+        .rrange {
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            width: 60px;
+            background: purple;
+            color: white
+        }
+        
+        textarea {
+            width: 360px;
+            height: 50px;
+        }
+
+        img{
+            max-width: 200px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Please Enter Your Details For Our Dating Website</h1>
+    <br>
+    <form action="https://learn.nucamp.co/show_everything.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Your Face</legend>
+            <label for="avatar">Your Image: </label>
+            <input type="file" name="avatar" id="avatar" required>
+            <br>
+            <label for="preview">Image Preview: </label>
+            <img id="preview" name="preview">
+        </fieldset>
+        <fieldset>
+            <legend>Your General Details</legend>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" placeholder="Your full name" required>
+            <br>
+            <label>Gender: </label>
+                <input type="radio" name="gender" id="male" value="male" required>
+                <label class="box_radio" for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="female" required>
+                <label class="box_radio" for="female">Female</label>
+                <br>
+            <label for="age">Age: </label>
+            <input type="number" name="age" id="age" required>
+            <br>
+            <label for="dob">Date of Birth: </label>
+            <input type="date" name="dob" id="dob"><br>
+            <label for="color">Favorite Color: </label>
+            <input type="color" name="color" id="color">
+            <br>
+            <label for="country">Which Country:</label>
+            <select>
+                <option name="country" id="country" value="empty"></option>
+                <option name="country" id="country" value="france">France</option>
+                <option name="country" id="country" value="japan">Japan</option>
+                <option name="country" id="country" value="germany">Germany</option>
+                <option name="country" id="country" value="uk">UK</option>
+                <option name="country" id="country" value="usa">USA</option>
+            </select>
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Your Indicators</legend>
+                <label for="height">Height: </label><span class="lrange"> Short </span><input type="range" name="height" id="height" min="0" max="100"> <span class="rrange"> Tall </span><br>
+                <label for="salary">Salary: </label><span class="lrange"> Poor </span><input type="range" name="salary" id="salary" min="0" max="100" > <span class="rrange"> Rich </span><br>
+        </fieldset>
+        <fieldset>
+            <legend>Your Contact Information</legend>
+            <label for="email">Email: </label><input type="email" name="email" id="email" required><br>
+            <label for="mobile">Mobile: </label>
+            <input type="number" name="mobile" id="mobile"><br>
+            <label for="address">Address: </label>
+            <textarea cols="20" name="address" id="address"></textarea>
+            <br>
+            <label>Method to contact you:</label>
+            <input type="checkbox" id="contact" name="contact" value="email">
+            Email
+            <input type="checkbox" id="contact" name="contact" value="whatsapp">
+            Whatsapp
+            <input type="checkbox" id="contact" name="contact" value="inappchat">
+            In-app chat
+        </fieldset>
+        <input type="submit">
+    </form>
+    <script src="https://url.nucamp.co/datingjs"></script>
+</body>
+</html>
