@@ -100,9 +100,55 @@ const cl = (input) =>{
 // age += 1;
 // dateOfBirth = "Jan 1, 1989";
 
+//VAR IS FUNCTIONALLY SCOPED
+// function func1(){
+//     var funcVar = "hey";
+//     cl(funcVar);
+// }
+// cl(funcVar);
+
+// const obj = {
+//     greeting1: "hey",
+//     greeting2: "hello",
+//     greeting3: "howdy"
+// }
+
+// for(var key in obj){
+//     cl(obj[key]);
+// }
+// cl(key)
+
+//LET AND CONST ARE BLOCK {} SCOPED
+
+// for(let key in obj){
+//     cl(obj[key])
+// }
+// cl(key)
+
 //////////////////////////////
-//FUNCTION DECLARATION AND FUNCTION EXPRESSION
+//FUNCTION DECLARATION, FUNCTION EXPRESSION, ARROW FUNCTION
+
+// cl(funcDeclaration());
 
 //DECLARATION
+function funcDeclaration(){
+    let num = 0;
+    num += 5;
+    return num;
+}
 
 //EXPRESSION
+const funcExpression = function(){
+    let str = "howdy";
+    str += " partner!";
+    return str;
+}
+
+//ARROW FUNCTION
+const funcArrow = () => {
+    let arr = [1, 2, 3];
+    arr.push(4, 5)
+    return arr;
+}
+
+// cl(funcArrow());
