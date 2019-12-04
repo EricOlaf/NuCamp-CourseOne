@@ -100,3 +100,9 @@ const cl = (input) =>{
 // age += 1;
 // dateOfBirth = "Jan 1, 1989";
 
+//////////////////////////////
+//FUNCTION DECLARATION AND FUNCTION EXPRESSION
+
+//DECLARATION
+
+//EXPRESSION
