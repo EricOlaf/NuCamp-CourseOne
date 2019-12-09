@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My JS Website</h1>
+    <!-- <script src="./fileName.js"></script> -->
+    <script>
+        const colorArr = ['blue', 'green', 'red', 'yellow', 'orange'];
+        colorArr.sort();
+        console.log(colorArr);
+        let num = Math.floor(Math.random() * colorArr.length);
+        let rightAns = colorArr[num];
+        let question = 'what is your favorite color:\n';
+        let ans = null;
+        let numTries = 0;
+        colorArr.forEach(x=>{question+= x + ", "});
+        console.log(rightAns);
+        console.log("this is my question " + question);
+        function displayPrompt(){
+            numTries++;
+            ans = prompt(question).toLowerCase();
+            console.log(ans, rightAns);
+            if(ans !== rightAns){
+                if(colorArr.includes(ans)){
+                    if(colorArr.indexOf(rightAns) > colorArr.indexOf(ans)){
+                        confirm("The right answer is alphabetically after your given answer");        
+                    }else{
+                        confirm("The right answer is alphabetically before your given answer");
+                    }
+                }else{
+                    confirm("sorry I didn't understand your answer")
+                }
+                displayPrompt();
+            }
+        }
+        displayPrompt();
+        confirm(`CONGRATS!!! This game took you ${numTries} times to get it right.`)
+        document.querySelector('body').style.background = ans;
+      
+    </script>
+</body>
+</html>
